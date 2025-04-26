@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f3e5d0; /* Light tan background */
+  margin: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background-color: #fff8f0; /* Creamy white */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(139, 69, 19, 0.2); /* Light brown shadow */
+}
+
+h1, h2 {
+  color: #4e342e; /* Dark brown */
+}
+
+.success-message {
+  color: #6b8e23; /* Olive green for success message */
+  margin-top: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #a1887f; /* Warm brown border */
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fdf6f0;
+}
+
+button {
+  background-color: #8b4513; /* Saddle brown */
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5d3210; /* Darker brown on hover */
+}

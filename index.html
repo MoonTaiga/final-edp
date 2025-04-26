@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Interactive Profile Dashboard</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>👋 Hi, I'm Jerico</h1>
+    <p>Hobbies: <span id="hobbies">Listening Music, Gaming</span></p>
+    <p>Favorite Quote: <em>"Stay hungry, stay foolish." – Steve Jobs</em></p>
+
+    <h2>🎉 Fun Facts</h2>
+    <button id="toggleFactsBtn">Toggle Fun Facts</button>
+    <ul id="funFacts" style="display: none;">
+      <li>I love sunsets & sunrise </li>
+      <li>I once gaming for 12 hours straight 😅</li>
+      <li>I talk to my computer sometimes 💻🗣️</li>
+    </ul>
+
+    <h2>📬 Contact Me</h2>
+    <form id="contactForm">
+      <label>Name: <input type="text" id="name" required></label><br>
+      <label>Email: <input type="email" id="email" required></label><br>
+      <label>Message:<br><textarea id="message" required></textarea></label><br>
+      <label>Date: <input type="text" id="datepicker"></label><br>
+      <button type="submit">Send</button>
+    </form>
+    <div id="formMessage" class="success-message" style="display:none;">✅ Message Sent Successfully!</div>
+
+    <h2>🌐 GitHub User Info</h2>
+    <input type="text" id="githubUsername" placeholder="Enter GitHub Username">
+    <button id="fetchGithub">Fetch User</button>
+    <div id="githubResult"></div>
+
+    <h2>🛠️ My Skills</h2>
+    <div id="accordion">
+      <h3>Frontend</h3>
+      <div><p>HTML, CSS, JavaScript, jQuery</p></div>
+      <h3>Backend</h3>
+      <div><p>Node.js, Express</p></div>
+      <h3>Tools</h3>
+      <div><p>Git, VS Code, Postman</p></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
