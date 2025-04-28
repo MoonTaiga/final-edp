@@ -45,4 +45,24 @@ document.getElementById('toggleFactsBtn').addEventListener('click', () => {
     $("#datepicker").datepicker();
     $("#accordion").accordion();
   });
+  document.getElementById('burgerBtn').addEventListener('click', function() {
+    document.body.classList.toggle('sidebar-active');
+    document.getElementById('mySidebar').classList.toggle('open');
+  });
   
+  // Handle menu item clicks
+  const menuItems = document.querySelectorAll('.menu-item');
+  menuItems.forEach(item => {
+    item.addEventListener('click', function() {
+      // Remove active class from all items
+      menuItems.forEach(i => i.classList.remove('active'));
+      // Add active class to clicked item
+      this.classList.add('active');
+      
+      // On mobile, close sidebar after selecting an item
+      if (window.innerWidth <= 768) {
+        document.body.classList.remove('sidebar-active');
+        document.getElementById('mySidebar').classList.remove('open');
+      }
+    });
+  });

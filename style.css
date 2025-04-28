@@ -46,3 +46,155 @@ button {
 button:hover {
   background-color: #5d3210; /* Darker brown on hover */
 }
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #5d3210; /* Darker brown to match your button hover */
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  transform: translateX(-250px); /* Start hidden */
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #fff8f0;
+}
+
+.sidebar-header h3 {
+  color: #fff8f0;
+  margin: 10px 0 5px;
+}
+
+.sidebar-header p {
+  color: #ddd;
+  margin: 0;
+  font-size: 14px;
+}
+
+.sidebar-menu {
+  padding: 0 15px;
+}
+
+.menu-item {
+  display: block;
+  color: #fff8f0;
+  padding: 15px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  transition: all 0.3s;
+}
+
+.menu-item:hover, .menu-item.active {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: #ddd;
+  font-size: 12px;
+}
+
+/* Main Content Adjustment */
+#main {
+  transition: margin-left 0.5s;
+  padding: 0;
+  position: relative;
+}
+
+body.sidebar-active #main {
+  margin-left: 250px;
+}
+
+/* Burger Button */
+.burger-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  background-color: #8b4513;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  transition: all 0.3s;
+}
+
+body.sidebar-active .burger-btn {
+  left: 270px;
+}
+
+.burger-line {
+  height: 3px;
+  width: 100%;
+  background-color: #fff8f0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+body.sidebar-active .burger-btn .burger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+body.sidebar-active .burger-btn .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+body.sidebar-active .burger-btn .burger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Adjust your container to fit with sidebar */
+.container {
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: #fff8f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(139, 69, 19, 0.2);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  body.sidebar-active #main {
+    margin-left: 0;
+  }
+  
+  .sidebar {
+    width: 100%;
+  }
+  
+  body.sidebar-active .burger-btn {
+    left: 20px;
+  }
+}
